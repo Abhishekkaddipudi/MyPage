@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFOLIO</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+            box-sizing: border-box ;
+            cursor:context-menu;
+            font-family: 'Itim', cursive;
+            font-weight: bolder;
+        }
+
+        a{
+            text-decoration: none;
+            color:black;
+           
+        }
+        a:hover{
+            border-radius: 2%;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
+        }
+        main{
+            min-height: 100vh;
+            background: linear-gradient(to right top,#65dfc9,#6cdbeb);
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            transition-property: display;
+            transition-duration: 5s;
+        }
+        .glass{
+            background: white;
+            height:83vh;
+            width: 60%;
+            background: linear-gradient(rgba(255,255,255, 0.5),rgba(255,255,255, 0.5));
+            border-radius: 2%;
+            display:flex;
+            z-index: 5;
+            transition-property: display;
+            transition-duration: 5s;
+           
+        }
+        .pro
+        {
+           background:linear-gradient(rgba(255,255,255, 0.1),rgba(255,255,255, 0.5));;
+           height:100%;
+           width:80%;
+           border-radius: 2%;
+           display: flex;
+           flex-direction: column;
+           justify-content:start;   
+       
+           text-align: center;
+        }
+        .handler
+        {
+         
+          display: flex;
+          flex-direction: column;
+           justify-content:center;
+           align-items: center; 
+        }
+        .info,.buy,.work{
+            margin-top: 30%;
+            width: max-content;
+            
+        }
+        .info :hover{
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
+            border-radius: 10%;
+            text-decoration: underline;
+            
+        }
+        .buy :hover{
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
+            border-radius: 10%;
+            text-decoration: underline;
+            
+        }
+        .work :hover{
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
+            border-radius: 10%;
+            text-decoration: underline;
+            
+        }
+        .first{
+            flex:1; 
+        }
+        .content{
+            
+            width: 120%;
+            height:90%;
+            background: linear-gradient(rgba(255,255,255, 0.1),rgba(255,255,255, 0.3));
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            margin-right:7% ;
+            text-align:left;
+            overflow:auto;
+           
+            
+        }
+       
+        .content1{
+          
+            width: 120%;
+            height:90%;
+            background: linear-gradient(rgba(255,255,255, 0.1),rgba(255,255,255, 0.3));
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            margin-right:7%;
+            overflow:auto;
+          
+        }
+        .content2{
+           
+            width: 120%;
+            height:90%;
+            background: linear-gradient(rgba(255,255,255, 0.1),rgba(255,255,255, 0.3));
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            margin-right:7%;
+            overflow:auto;
+          
+        }
+       
+          
+       
+        .second{
+           
+            flex:2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: display 2s;
+            
+        }
+        .pro img{
+            width:55%;
+            margin-left:22%;
+            border-radius: 50%;
+            
+
+        }
+        .pro p{
+            font-size:90% ;
+            margin-left: 1%;
+            font-weight: bolder;
+        }
+        .heading,.objective{
+            
+            margin-left:10%;
+            margin-top:5%;
+        }
+      
+        .acttext{
+            margin-left:10%;
+            margin-top:7%;
+            margin-right:15%;
+        }
+        .acttex{
+            margin-left:10%;
+            margin-top:2%;
+            margin-right:15%;
+        }
+        .objective img{
+            margin-top: 9%;
+        }
+       
+        .icons :hover{
+            border-radius: 50%;
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.301);
+        }
+        #linkedin{
+            width: 7%;
+        }
+        #facebook{
+        width: 8%;
+        }
+        #instagram{
+            width: 10%;
+        }
+        .python{
+            float: left;
+        }
+        #py{
+            margin-left: 7%;
+        }
+        #turtle{
+            margin-top: 10%;
+            text-decoration: underline;
+        }
+        
+      
+        .sig{
+            display: flex;
+           float: left;
+           justify-content: safe;
+           margin-top: 5%;
+        }
+       #write{
+           width: 80%;
+           
+       }
+       #feed{
+           border:none;
+           color:#6cdbeb;
+           font-size: 100%;
+           
+           border-radius: 15%;
+       }
+       #feed:hover{
+       
+           background-color: cadetblue;
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.301);
+
+       }
+       .circle,.circle1,.circle2,.circle3,.circle4,.circle5,.circle6,.circle7,.circle8,.circle9,.circle10,.circle11,
+       .circle12,.circle13,.circle14,.circle15,.circle16,.circle17,.circle18,.circle19,.circle20,.circle21,.circle22,.circle23{
+           min-height: 100px;
+           width:100px;
+           border-radius: 50%;
+           background: linear-gradient(rgba(255,255,255, 0.1),rgba(255,255,255, 0.3));
+           position: absolute;
+           z-index: 1;
+           
+       }
+       .circle{
+          
+           top: 0px;
+           left:0px;
+       }
+       .circle1{
+           top:50px;
+           left:50px;
+       }
+       .circle2{
+           top:100px;
+           left:100px;
+       }
+       .circle3{
+           top:150px;
+           left:150px;
+       }
+       .circle4{
+           top:200px;
+           left:200px;
+       }
+       .circle5{
+           top:250px;
+           left:250px;
+       }
+       .circle6{
+          
+          top: 0px;
+          right:0px;
+      } 
+      .circle7{
+          top:50px;
+          right:50px;
+      }
+      .circle8{
+          top:100px;
+          right:100px;
+      }
+      .circle9{
+          top:150px;
+          right:150px;
+      }
+      .circle10{
+          top:200px;
+          right:200px;
+      }
+      .circle11{
+          top:250px;
+          right:250p;
+      }
+      .circle12{
+          
+          top: 200px;
+          left:0px;
+      }
+      .circle13{
+          top:250px;
+          left:50px;
+      }
+      .circle14{
+          top:300px;
+          left:100px;
+      }
+      .circle15{
+          top:350px;
+          left:150px;
+      }
+      .circle16{
+          top:400px;
+          left:200px;
+      }
+      .circle17{
+          top:450px;
+          left:250px;
+      }
+      .circle18{
+         
+         top: 200px;
+         right:0px;
+     }
+     .circle19{
+         top:250px;
+         right:50px;
+     }
+     .circle20{
+         top:300px;
+         right:100px;
+     }
+     .circle21{
+         top:350px;
+         right:150px;
+     }
+     .circle22{
+         top:400px;
+         right:200px;
+     }
+     .circle23{
+         top:450px;
+         right:250px;
+     }
+     #image{
+         width:20%;
+        position:absolute;
+        top:450px;
+        left:900px;
+     }
+    </style>
+
+</head>
+<body onload="onlo()">
+    <main>
+        <div class="circle">
+        </div>
+        <div class="circle1">
+        </div>
+        <div class="circle2">
+        </div>
+        <div class="circle3">
+        </div>
+        <div class="circle4">
+        </div>
+        <div class="circle5">
+        </div><div class="circle6">
+        </div><div class="circle7">
+        </div><div class="circle8">
+        </div><div class="circle9">
+        </div><div class="circle10">
+        </div><div class="circle11">
+        </div>
+        <div class="circle12">
+        </div>
+        <div class="circle13">
+        </div>
+        <div class="circle14">
+        </div>
+        <div class="circle15">
+        </div>
+        <div class="circle16">
+        </div>
+        <div class="circle17">
+        </div><div class="circle18">
+        </div><div class="circle19">
+        </div><div class="circle20">
+        </div><div class="circle21">
+        </div><div class="circle22">
+        </div><div class="circle23">
+        </div>
+
+        <section class ="glass">
+            <div class="first">
+                <div class="pro">
+                        <img src="https://drive.google.com/uc?id=1rGR5X5MS3AQLuniWkaQyZBdL2ks2a3oM" alt="Mypic">
+                        <p>ABHISHEK N KADDIPUDI</p>
+                        <div class="handler">
+                            <div class="info" onclick="dcontent()">
+                                <h3>INFO</h3>
+                            </div>
+                            <div class="work"onclick="dcontent1()">
+                                <h3>WORK</h3>
+                            </div>
+                            <div class="buy"onclick="dcontent2()">
+                                <h3>BUY ME A COFFEE</h3>
+                            </div>
+                        </div>
+                    </div>           
+                </div>
+           <div class="second">
+               <div class="content">
+                   <div class="heading">
+                        <h1>I'm ABHISHEK,</h1>
+                        <h1>A BCA STUDENT</h1>
+                        <P style="text-decoration:underline">AND THIS IS MY PORTFOLIO:</P>
+                   
+                        <div class="acttext">
+                                <p>
+                                    I m a student who is interested in learning tech stuff and making a real time project.   
+                                </p>
+                                <p>
+                                    In this journey of mine I learnt about webpages.
+                                </p>
+                                <p>
+                                    learned many of programming languages.
+                                </p>
+                        </div>
+                </div>
+                    <div class="objective">
+                            <h1 style="text-decoration:underline">OBJECTIVE:</h1>
+                            <div class="acttext">
+                            <p>To work in a challenging environment that would utilize my overall potential,
+                                knowledge,skills and help my career growth in prosperous manner.</p>
+                    </div>
+                    <div class="icons">
+                        <a href="https://sw-ke.facebook.com/abhishek.kaddipudi" target="_blank">
+                            <img src="https://cdn3.iconfinder.com/data/icons/glypho-social-and-other-logos/64/logo-facebook-512.png"id="facebook">
+                        </a>
+                        <a href="https://www.instagram.com/abhishek_kaddipudi?r=nametag"target="_blank">
+                            <img src="https://i.pinimg.com/originals/63/9b/3d/639b3dafb544d6f061fcddd2d6686ddb.png" id="instagram">
+                        </a>
+                        <a href="https://in.linkedin.com/in/abhishek-kaddipudi-97b86a190?trk=people_directory"target="_blank">
+                            <img src="https://image.flaticon.com/icons/png/512/61/61109.png" id="linkedin">
+                        </a>
+                    </div>
+                    </div>
+                </div>
+                    <div class="content1">
+                        <div class="heading">
+                            <h3 style="text-decoration:underline" >
+                                ASSESSMENTS:
+                            </h3>
+                            <div class="acttext">
+                                <ul>
+                                    <li>Hands on experience on java,python,cpp,c,html,css,js and kali-linux </li>
+                                    <li> Handling 3d Modeling software BLENDER  </li>
+                                    <li>Creating 2d games using pygame module</li>
+                                    <li>Creating Shapes using turtle module</li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="heading">
+                            <h3 style="text-decoration:underline" >
+                               SOME OF MY WORK:
+                            </h3>
+                            <div class="acttex">
+                                <dl class="python">
+                                    <dt style="text-decoration:underline">PY-GAME MODULE </dt>
+                                    
+                                        <ul>
+                                            <li><a href="https://drive.google.com/drive/folders/1RzOjG9eKl1S2oaV0vNyI9mqaWVt65d6W?usp=sharing" target="_blank">EGG  GAME</a></li> 
+                                        </ul>
+                                                                           
+                                    
+                                        <ul >
+                                            <li> <a href="https://drive.google.com/drive/folders/1xWbLi1hmOR6he8DFfevl1uIrlaWh4Y38?usp=sharing" target="_blank">CAR GAME</a></li> 
+                                        </ul>
+                                    <dt id="turtle">TURTLE MODULE </dt>
+                                    <ul>
+                                        <li><a href="https://drive.google.com/file/d/1MjYwb2P5IJj98iiU7J_4DIDk0Rs3PurA/view?usp=sharing" target="_blank">HEART SHAPE</a></li>
+                                    </ul>
+                                </dl>
+                                <dl class="python" id="py">
+                                    <dt style="text-decoration:underline">WEBPAGES </dt>
+                                    
+                                        <ul>
+                                            <li><a href="https://608fa6c6346be.htmlsave.net/" target="_blank">3d ANIMATION PAGE</a></li> 
+                                        </ul>
+                                                                           
+                                    
+                                        <ul >
+                                            <li> <a href="https://drive.google.com/file/d/144eMhf5y6k4iw7HmR_XO1EXzFY-hNzmI/view?usp=sharing" target="_blank">ZORO PROFILE PAGE</a></li> 
+                                        </ul>
+                                    <dt id="turtle">BLENDER </dt>
+                                    <ul>
+                                        <li><a href="https://drive.google.com/file/d/1jfMsPNgYO-39nlOqzqHxLRWbyVNjvomT/view?usp=sharing" target="_blank">NAME INTRO VIDEO</a></li>
+                                        
+                                        <li><a href="https://drive.google.com/file/d/1jlyL4sIH858wUFOv0YnFTLs-KC9Mik15/view?usp=sharing" target="_blank">RENDERING A SHIVLING</a></li>
+                                    </ul>
+                                </dl>
+                                
+                                
+                            </div>
+                            <div class="sig">
+                            <div class="icons">
+                                    <a href="https://sw-ke.facebook.com/abhishek.kaddipudi" target="_blank">
+                                        <img src="https://cdn3.iconfinder.com/data/icons/glypho-social-and-other-logos/64/logo-facebook-512.png"id="facebook">
+                                    </a>
+                                    <a href="https://www.instagram.com/abhishek_kaddipudi?r=nametag" target="_blank">
+                                        <img src="https://i.pinimg.com/originals/63/9b/3d/639b3dafb544d6f061fcddd2d6686ddb.png" id="instagram">
+                                    </a>
+                                    <a href="https://in.linkedin.com/in/abhishek-kaddipudi-97b86a190?trk=people_directory" target="_blank">
+                                        <img src="https://image.flaticon.com/icons/png/512/61/61109.png" id="linkedin">
+                                    </a>
+                                </div>    
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="content2">
+                        <div class="heading">
+                            <h3 style="text-decoration:underline" >
+                                BUY ME A COFFEE:
+                            </h3>
+                            <div class="acttext">
+                            <p>I want to continue this journey of mine u can support me by buying a coffee</p>  
+                   </div>
+                   <div class="heading">
+                       <h3 style="text-decoration:underline" >
+                           Details:
+                       </h3>
+                       <div class="acttext"  id="phone">
+                       <p>phonepay@-9148485217</p>
+                       </div>
+                       <div class="acttext">
+                       <p>Email: <a href="mailto:abhishekkaddipudi123@gmail.com">abhishekkaddipudi123@gmail.com</a></p>
+                  </div>
+                  <div class="heading">
+                <textarea id="write" rows="6" cols="70">
+
+                </textarea> 
+                <button type="button" id="feed" onclick="all()">send feedback</button> 
+                <img id="image" src="i.png" alt="">
+                </div>
+                   </div>
+                   
+
+                     </div>
+                 </div>
+            
+        </section>
+    </main>
+    <script>
+        const c = document.querySelector(".content");
+        const c1 = document.querySelector(".content1");
+        const c2 = document.querySelector(".content2");
+        const h = document.querySelector(".heading");
+        const ph = document.getElementById("phone");
+        var no="9148485217";
+        c.addEventListener("mouseover",(e) =>
+        {
+            h.style.transform="translatez(100px)";
+        });
+        c.addEventListener("mouseout",(e) =>
+        {
+            h.style.transform="translatez(0px)";
+        });
+        function onlo(){
+            c.style.display="block";
+           
+           c1.style.display="none";
+           c2.style.display="none";
+            
+        }
+       function dcontent(){
+            c.style.display="block";
+           
+            c1.style.display="none";
+            c2.style.display="none";
+            
+        }
+        function dcontent1(){
+           
+            c.style.display="none";
+            c1.style.display="block";
+            c2.style.display="none";
+            
+        }
+        function dcontent2(){
+            c.style.display="none";
+            c1.style.display="none";
+            c2.style.display="block";
+        }
+        function all(){
+            var txt = document.getElementById("write");
+         
+            alert("sent "+txt.value+ " to abhishekkaddipudi123@gmail.com");
+           
+        }
+ ph.addEventListener("click",(e)=>{
+     
+    let textarea = document.createElement('textarea');
+textarea.setAttribute('type', 'hidden');
+textarea.textContent = '9148485217';
+document.body.appendChild(textarea);
+textarea.select();
+document.execCommand('copy')
+alert("copied :"+textarea.value)
+
+ }
+ )
+    </script>
+</body>
+</html>
